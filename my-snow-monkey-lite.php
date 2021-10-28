@@ -44,14 +44,14 @@ add_action(
 			'my-snow-monkey-lite-style',
 			MY_SNOW_MONKEY_URL . '/assets/css/style.css',
 			[ Framework\Helper::get_main_style_handle() ],
-			filemtime( plugin_dir_path( __FILE__ ) )
+			filemtime( MY_SNOW_MONKEY_PATH . '/assets/css/style.css' )
 		);
 
 		wp_enqueue_script(
 			'my-snow-monkey-lite-scripts',
 			MY_SNOW_MONKEY_URL . '/assets/js/scripts.js',
 			null,
-			filemtime( plugin_dir_path( __FILE__ ) ),
+			filemtime( MY_SNOW_MONKEY_PATH . '/assets/js/scripts.js' ),
 			true
 		);
 	}
