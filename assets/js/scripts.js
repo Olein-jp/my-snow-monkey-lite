@@ -1,0 +1,1 @@
+console.log( 'このメッセージはファイルの読み込みを確認するためのものです。確認後は必ず My Snow Monkey Lite の assets/js/scripts.js 内の console.log を削除してください' );

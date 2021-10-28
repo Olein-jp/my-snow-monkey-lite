@@ -1,7 +1,10 @@
 <?php
 /**
- * Plugin name: My Snow Monkey
- * Description: Olein Design 制作の My Snow Monkey
+ * Plugin name: My Snow Monkey Lite
+ * Plugin URI: https://github.com/Olein-jp/my-snow-monkey-lite
+ * Author: Koji Kuno
+ * Author URI: https://olein-design.com
+ * Description: Snow Monkey をカスタマイズするためのプラグイン雛形ライト版です。WordPress や Snow Monkey を活用した制作にお困りの方は有償相談を承っております。ぜひご活用ください。
  * Version: 1.0.0
  *
  * @package my-snow-monkey
@@ -38,15 +41,15 @@ add_action(
 	'wp_enqueue_scripts',
 	function() {
 		wp_enqueue_style(
-			'my-snow-monkey-style',
-			MY_SNOW_MONKEY_URL . '/build/css/style.css',
+			'my-snow-monkey-lite-style',
+			MY_SNOW_MONKEY_URL . '/assets/css/style.css',
 			[ Framework\Helper::get_main_style_handle() ],
 			filemtime( plugin_dir_path( __FILE__ ) )
 		);
 
 		wp_enqueue_script(
-			'oleindesign-script',
-			MY_SNOW_MONKEY_URL . '/build/js/scripts.js',
+			'my-snow-monkey-lite-scripts',
+			MY_SNOW_MONKEY_URL . '/assets/js/scripts.js',
 			null,
 			filemtime( plugin_dir_path( __FILE__ ) ),
 			true
@@ -62,6 +65,6 @@ add_action(
 	function() {
 		add_theme_support( 'editor-styles' );
 
-		add_editor_style( plugins_url( 'build/css/editor-style.css', __FILE__ ) );
+		add_editor_style( MY_SNOW_MONKEY_URL . '/assets/css/editor-style.css' );
 	}
 );
